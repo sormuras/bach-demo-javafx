@@ -1,15 +1,16 @@
 name: build
-
 on: push
-
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     steps:
-    - uses: actions/checkout@v1
-    - name: Set up JDK
-      uses: actions/setup-java@v1
-      with:
-        java-version: 11
-    - name: Build with Bach.java
-      run: jshell https://bit.ly/bach-jsh
+      - name: 'Checkout'
+        uses: actions/checkout@v1
+      - name: 'Set up JDK'
+        uses: actions/setup-java@v1
+        with:
+          java-version: 11
+      - name: 'Build with Bach.java'
+        run: jshell https://bit.ly/bach-jsh
+      - name: 'Describe module'
+        run: jar --describe-module --file .bach/out/main/modules/com.github.sormuras.bach.javafx-0.jar
