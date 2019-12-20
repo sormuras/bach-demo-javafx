@@ -4,8 +4,8 @@
 
 ## Prepare
 
-- Download JDK 11 or later
-- Clone this repository
+- Download and install [JDK] 11 or later.
+- Clone this repository.
 
 ## Build
 
@@ -17,3 +17,4 @@
 - or call `.bach\out\main\image\bin\bach-javafx.bat` on Windows.
 
 [Bach.java]: https://github.com/sormuras/bach
+[JDK]: https://jdk.java.net
