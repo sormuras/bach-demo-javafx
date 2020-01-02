@@ -9,7 +9,7 @@
 
 ## Build
 
-- Call `jshell https://bit.ly/bach-jsh` in base directory of this project.
+- Call `jshell https://bit.ly/bach-build` in base directory of this project.
 
 ## Run
 
