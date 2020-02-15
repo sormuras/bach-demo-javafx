@@ -16,6 +16,6 @@ jobs:
         with:
           java-version: 11
       - name: 'Build with Bach.java'
-        run: jshell https://bit.ly/bach-build
+        run: jshell https://github.com/sormuras/bach/raw/2.1/src/bach/build.jsh
       - name: 'Describe module'
         run: jar --describe-module --file .bach/out/main/modules/com.github.sormuras.bach.javafx-0.jar
