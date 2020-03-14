@@ -1,21 +1,21 @@
 name: build
-on: 
+on:
   push:
     branches:
-    - master
+      - master
   schedule:
-  - cron: "30 2 * * 6"
+    - cron: "30 2 * * 6"
 jobs:
   build:
     runs-on: windows-latest
     steps:
       - name: 'Checkout'
-        uses: actions/checkout@v1
+        uses: actions/checkout@v2
       - name: 'Set up JDK'
         uses: actions/setup-java@v1
         with:
           java-version: 11
       - name: 'Build with Bach.java'
-        run: jshell https://github.com/sormuras/bach/raw/2.1/src/bach/build.jsh
-      - name: 'Describe module'
-        run: jar --describe-module --file .bach/out/main/modules/com.github.sormuras.bach.javafx-0.jar
+        run: jshell https://bit.do/bach-build
+      - name: 'Describe main module'
+        run: jar --describe-module --file .bach/modules/main/com.github.sormuras.bach.javafx.jar
