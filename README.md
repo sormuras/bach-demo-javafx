@@ -4,17 +4,30 @@
 
 ## Prepare
 
-- Download and install [JDK] 11 or later.
-- Clone this repository.
+- Download [JDK] 11 or later
+- Clone this repository
+- Open a command shell and ensure `jshell --version` working correctly
 
 ## Build
 
-- Call `jshell https://bit.ly/bach-build` in base directory of this project.
+Change into the base directory of your cloned project and call:
 
-## Run
+```shell script
+jshell https://bit.do/bach-build
+```
 
-- Call `./bach/out/main/image/bin/bach-javafx` on Linux/Mac
-- or call `.bach\out\main\image\bin\bach-javafx.bat` on Windows.
+## Run via Java Launcher
+
+- Linux/Mac
+```shell script
+java --module-path .bach/modules/main:lib --module com.github.sormuras.bach.javafx
+```
+
+- Windows
+```shell script
+java --module-path .bach\modules\main;lib --module com.github.sormuras.bach.javafx
+```
+
 
 [Bach.java]: https://github.com/sormuras/bach
 [JDK]: https://jdk.java.net
