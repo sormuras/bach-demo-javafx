@@ -32,12 +32,12 @@ java --module-path .bach\modules\main;lib --module com.github.sormuras.bach.java
 
 - Linux/Mac
 ```shell script
-.bach/images/main/com.github.sormuras.bach.javafx
+.bach/images/main/bin/bach.javafx
 ```
 
 - Windows
 ```shell script
-.bach\images\main\com.github.sormuras.bach.javafx.bat
+.bach\images\main\bin\bach.javafx.bat
 ```
 
 
