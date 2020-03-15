@@ -7,14 +7,20 @@ on:
     - cron: "30 2 * * 6"
 jobs:
   build:
-    runs-on: windows-latest
+    name: "Build (JDK-${{ matrix.java }}, ${{ matrix.os }})"
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macOS-latest, windows-latest]
+        java: [11]
+    runs-on: ${{ matrix.os }}
     steps:
       - name: 'Checkout'
         uses: actions/checkout@v2
       - name: 'Set up JDK'
         uses: actions/setup-java@v1
         with:
-          java-version: 11
+          java-version: ${{ matrix.java }}
       - name: 'Build with Bach.java'
         run: jshell https://bit.do/bach-build
       - name: 'Describe main module'
