@@ -28,6 +28,18 @@ java --module-path .bach/modules/main:lib --module com.github.sormuras.bach.java
 java --module-path .bach\modules\main;lib --module com.github.sormuras.bach.javafx
 ```
 
+## Run via custom runtime image
+
+- Linux/Mac
+```shell script
+.bach/images/main/com.github.sormuras.bach.javafx
+```
+
+- Windows
+```shell script
+.bach\images\main\com.github.sormuras.bach.javafx.bat
+```
+
 
 [Bach.java]: https://github.com/sormuras/bach
 [JDK]: https://jdk.java.net
