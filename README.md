@@ -13,7 +13,7 @@
 Change into the base directory of your cloned project and call:
 
 ```shell script
-jshell https://bit.do/bach-build
+jshell https://sormuras.de/bach-build
 ```
 
 ## Run via Java Launcher
