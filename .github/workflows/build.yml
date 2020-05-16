@@ -22,11 +22,4 @@ jobs:
         with:
           java-version: ${{ matrix.java }}
       - name: 'Build with Bach.java'
-        run: jshell https://sormuras.de/bach-build
-      - name: 'Describe main module'
-        run: jar --describe-module --file .bach/modules/main/com.github.sormuras.bach.javafx.jar
-      - name: 'Upload build summary'
-        uses: actions/upload-artifact@v1
-        with:
-          name: summary.md
-          path: .bach/summary.md
+        run: jshell -R-Debug https://sormuras.de/bach-build
