@@ -21,5 +21,7 @@ jobs:
         uses: actions/setup-java@v1
         with:
           java-version: ${{ matrix.java }}
-      - name: 'Build with Bach.java'
-        run: jshell -R-Debug https://sormuras.de/bach/build
+      - name: 'Boot Bach.java into .bach directory'
+        run: jshell -R-Debug https://sormuras.de/bach/boot
+      - name: 'Build project'
+        run: java -Debug --module-path .bach/lib --add-modules de.sormuras.bach,jdk.unsupported .bach/src/build/build/Build.java
