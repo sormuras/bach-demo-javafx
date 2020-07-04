@@ -13,8 +13,7 @@
 Change into the base directory of your cloned project and call:
 
 ```shell script
-jshell https://sormuras.de/bach/boot
-java --module-path .bach/lib --add-modules de.sormuras.bach,jdk.unsupported .bach/src/build/build/Build.java
+jshell https://sormuras.de/bach@11.3-M1/build
 ```
 
 ## Run via Java Launcher
