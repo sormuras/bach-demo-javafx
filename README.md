@@ -13,31 +13,32 @@
 Change into the base directory of your cloned project and call:
 
 ```shell script
-jshell https://sormuras.de/bach/build
+jshell https://sormuras.de/bach/boot
+java --module-path .bach/lib --add-modules de.sormuras.bach,jdk.unsupported .bach/src/build/build/Build.java
 ```
 
 ## Run via Java Launcher
 
 - Linux/Mac
 ```shell script
-java --module-path .bach/workspace/modules/main:lib --module com.github.sormuras.bach.javafx
+java --module-path .bach/workspace/modules:lib --module com.github.sormuras.bach.javafx
 ```
 
 - Windows
 ```shell script
-java --module-path .bach\workspace\modules\main;lib --module com.github.sormuras.bach.javafx
+java --module-path .bach\workspace\modules;lib --module com.github.sormuras.bach.javafx
 ```
 
 ## Run via custom runtime image
 
 - Linux/Mac
 ```shell script
-.bach/workspace/image/bin/javafx
+.bach/workspace/image/bin/bach-javafx
 ```
 
 - Windows
 ```shell script
-.bach\workspace\image\bin\javafx[.bat]
+.bach\workspace\image\bin\bach-javafx[.bat]
 ```
 
 
