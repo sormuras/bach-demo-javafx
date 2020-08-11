@@ -10,7 +10,7 @@ class Build {
   public static void main(String... args) {
     var library = Library.of().withRequires("org.junit.platform.console").with(modulesOfJavaFX());
 
-    Bach.of(project -> project.with(library)).buildProject();
+    Bach.of(project -> project.library(library)).build();
   }
 
   // https://repo.maven.apache.org/maven2/org/openjfx

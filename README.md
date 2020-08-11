@@ -6,14 +6,14 @@
 
 - Download [JDK] 11 or later
 - Clone this repository
-- Open a command shell and ensure `jshell --version` working correctly
+- Open a command shell and ensure `jshell --version` is working correctly
 
 ## Build
 
 Change into the base directory of your cloned project and call:
 
 ```shell script
-jshell https://sormuras.de/bach@11.3-M1/build
+jshell https://sormuras.de/bach/build
 ```
 
 ## Run via Java Launcher
