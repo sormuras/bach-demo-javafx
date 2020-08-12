@@ -5,7 +5,7 @@ import de.sormuras.bach.project.Library;
 import de.sormuras.bach.project.Link;
 import java.util.Locale;
 
-class Build {
+public class Build {
 
   public static void main(String... args) {
     var library = Library.of().withRequires("org.junit.platform.console").with(modulesOfJavaFX());
