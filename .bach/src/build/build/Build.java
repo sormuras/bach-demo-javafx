@@ -15,9 +15,9 @@ public class Build {
 
   // https://repo.maven.apache.org/maven2/org/openjfx
   static Link[] modulesOfJavaFX() {
-    var version = "14.0.1";
+    var version = "15";
     return new Link[] {
-      linkJavaFX_14_0_1_BaseModuleWithSizeAndChecksumPerPlatform(),
+      linkJavaFX_15_BaseModuleWithSizeAndChecksumPerPlatform(),
       linkModuleOfJavaFX("controls", version),
       linkModuleOfJavaFX("graphics", version)
     };
@@ -30,13 +30,13 @@ public class Build {
     return Link.ofCentral("javafx." + suffix, coordinates);
   }
 
-  // https://repo.maven.apache.org/maven2/org/openjfx/javafx-base/14.0.1
-  static Link linkJavaFX_14_0_1_BaseModuleWithSizeAndChecksumPerPlatform() {
-    var md5Linux = "50505c5915076fde97f5d61b588e2481";
-    var md5MacOS = "77501f1d68b7d8e1d6cf0f177fa8e5c9";
-    var md5Windows = "47b5c7aef0cb9bffc7c5c5bf00e5c872";
-    return linkModuleOfJavaFX("base", "14.0.1")
-        .withSize(of(751228, 751229, 751229))
+  // https://repo.maven.apache.org/maven2/org/openjfx/javafx-base/15
+  static Link linkJavaFX_15_BaseModuleWithSizeAndChecksumPerPlatform() {
+    var md5Linux = "e5f060c68f8a0237fcad96f5a6691921";
+    var md5MacOS = "478e81da78ce24efdc841dd78ed164e8";
+    var md5Windows = "8afbd4ffb1d066c8c09788239ce93e31";
+    return linkModuleOfJavaFX("base", "15")
+        .withSize(of(745516, 745453, 745515))
         .withDigest("md5", of(md5Linux, md5MacOS, md5Windows));
   }
 
