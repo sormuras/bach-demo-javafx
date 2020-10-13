@@ -22,4 +22,4 @@ jobs:
         with:
           java-version: ${{ matrix.java }}
       - name: 'Build project with Bach'
-        run: jshell https://sormuras.de/bach/build
+        run: jshell https://sormuras.de/bach@11.9/build
