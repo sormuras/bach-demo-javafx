@@ -11,15 +11,15 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [ubuntu-latest, macOS-latest, windows-latest]
-        java: [11]
+        os: [ ubuntu-latest, macOS-latest, windows-latest ]
+        java: [ 16-ea ]
     runs-on: ${{ matrix.os }}
     steps:
-      - name: 'Checkout'
+      - name: 'Check out repository'
         uses: actions/checkout@v2
       - name: 'Set up JDK'
         uses: actions/setup-java@v1
         with:
           java-version: ${{ matrix.java }}
-      - name: 'Build project with Bach'
-        run: jshell https://sormuras.de/bach@11.9/build
+      - name: 'Build with Bach'
+        uses: sormuras/bach-build@main
