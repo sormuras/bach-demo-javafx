@@ -6,7 +6,7 @@ import com.github.sormuras.bach.ProjectInfo.Test;
 import com.github.sormuras.bach.ProjectInfo.Tweak;
 
 @ProjectInfo(
-    name = "bach+fx",
+    name = "bach-javafx",
     version = "1",
     library =
         @Library(
@@ -25,10 +25,20 @@ import com.github.sormuras.bach.ProjectInfo.Tweak;
     main =
         @Main(
             generateCustomRuntimeImage = true,
-            tweaks =
-                @Tweak(
-                    tool = "jar(com.github.sormuras.bach.javafx)",
-                    args = {"--main-class", "com.github.sormuras.bach.javafx.Main"})),
+            tweaks = {
+              @Tweak(
+                  tool = "jar(com.github.sormuras.bach.javafx)",
+                  args = {"--main-class", "com.github.sormuras.bach.javafx.Main"}),
+              @Tweak(
+                  tool = "jlink",
+                  args = {
+                    "--launcher",
+                    "bach-javafx=com.github.sormuras.bach.javafx/com.github.sormuras.bach.javafx.Main",
+                    "--no-header-files",
+                    "--no-man-pages",
+                    "--strip-debug"
+                  }),
+            }),
     test =
         @Test(
             tweaks =

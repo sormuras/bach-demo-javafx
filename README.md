@@ -1,6 +1,6 @@
 # Bach + JavaFX App
 
-[Bach.java] demo based on [HelloFX/CLI](https://github.com/openjfx/samples/tree/master/HelloFX/CLI) by [OpenJFX].
+A demo of building a modular application with [Bach.java] based on [HelloFX/CLI](https://github.com/openjfx/samples/tree/master/HelloFX/CLI) by [OpenJFX].
 
 ## Prepare
 
@@ -14,18 +14,6 @@ Change into the base directory of your cloned project and call:
 
 ```shell script
 jshell https://bit.ly/bach-main-build
-```
-
-## Run via Java Launcher
-
-- Linux/Mac
-```shell script
-java --module-path .bach/workspace/modules:.bach/workspace/libraries --module com.github.sormuras.bach.javafx
-```
-
-- Windows
-```shell script
-java --module-path .bach\workspace\modules;.bach\workspace\libraries --module com.github.sormuras.bach.javafx
 ```
 
 ## Run via custom runtime image
