@@ -30,8 +30,9 @@ jobs:
         uses: sormuras/bach-build@main
       - name: 'Package self-contained Java application'
         shell: bash
-        run: jpackage --verbose \
-               --type app-image \
-               --runtime-image .bach/workspace/image \
-               --name bach+fx \
-               --module com.github.sormuras.bach.javafx/com.github.sormuras.bach.javafx.Main
+        run: |
+          jpackage --verbose \
+          --type app-image \
+          --runtime-image .bach/workspace/image \
+          --name bach+fx \
+          --module com.github.sormuras.bach.javafx/com.github.sormuras.bach.javafx.Main
