@@ -32,8 +32,6 @@ jobs:
         shell: bash
         run: |
           jpackage --verbose \
-          --app-version ${{ github.sha }} \
-          --type app-image \
           --runtime-image .bach/workspace/image \
           --name bach+fx \
           --module com.github.sormuras.bach.javafx/com.github.sormuras.bach.javafx.Main \
