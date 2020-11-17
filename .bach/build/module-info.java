@@ -24,6 +24,7 @@ import com.github.sormuras.bach.ProjectInfo.Tweak;
             }),
     main =
         @Main(
+            generateCustomRuntimeImage = true,
             tweaks =
                 @Tweak(
                     tool = "jar(com.github.sormuras.bach.javafx)",
