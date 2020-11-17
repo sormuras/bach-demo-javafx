@@ -32,7 +32,15 @@ jobs:
         shell: bash
         run: |
           jpackage --verbose \
+          --app-version ${{ github.sha }} \
           --type app-image \
           --runtime-image .bach/workspace/image \
           --name bach+fx \
-          --module com.github.sormuras.bach.javafx/com.github.sormuras.bach.javafx.Main
+          --module com.github.sormuras.bach.javafx/com.github.sormuras.bach.javafx.Main \
+          --dest .bach/workspace/package
+      - name: 'Upload packaged application'
+        uses: actions/upload-artifact@v2
+        with:
+          name: ${{ github.event.repository.name }}-${{ matrix.os }}-${{ github.sha }}
+          path: |
+            .bach/workspace/package
