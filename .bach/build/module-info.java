@@ -14,7 +14,7 @@ import com.github.sormuras.bach.module.ModuleSearcher.JUnitPlatformSearcher;
     version = "1",
     library =
         @Library(
-            requires = {"org.junit.platform.console"},
+            requires = {"org.junit.platform.console", "org.junit.jupiter"},
             links = {
               @Link(module = "org.apiguardian.api", target = "org.apiguardian:apiguardian-api:1.1.0"),
               @Link(module = "org.opentest4j", target = "org.opentest4j:opentest4j:1.2.0"),
