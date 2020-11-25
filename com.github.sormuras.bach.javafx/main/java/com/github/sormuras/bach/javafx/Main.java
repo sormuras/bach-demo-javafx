@@ -17,6 +17,7 @@ public class Main extends Application {
     var scene = new Scene(new StackPane(label), 640, 480);
     stage.setScene(scene);
     stage.show();
+    stage.setTitle(Main.class.getModule().getDescriptor().toNameAndVersion());
   }
 
   public static void main(String[] args) {

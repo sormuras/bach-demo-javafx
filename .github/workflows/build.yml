@@ -32,8 +32,10 @@ jobs:
         shell: bash
         run: |
           jpackage --verbose \
-          --runtime-image .bach/workspace/image \
           --name bach+fx \
+          --description "Show-case building a modular Java + JavaFX application with Bach"
+          --vendor "Christian Stein"
+          --runtime-image .bach/workspace/image \
           --module com.github.sormuras.bach.javafx/com.github.sormuras.bach.javafx.Main \
           --dest .bach/workspace/package
       - name: 'Upload packaged application'
