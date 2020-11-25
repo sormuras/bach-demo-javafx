@@ -1,26 +1,28 @@
 import com.github.sormuras.bach.ProjectInfo;
 import com.github.sormuras.bach.ProjectInfo.Library;
 import com.github.sormuras.bach.ProjectInfo.Library.Link;
+import com.github.sormuras.bach.ProjectInfo.Library.Searcher;
 import com.github.sormuras.bach.ProjectInfo.Main;
 import com.github.sormuras.bach.ProjectInfo.Test;
 import com.github.sormuras.bach.ProjectInfo.Tweak;
+import com.github.sormuras.bach.module.ModuleSearcher.JavaFXSearcher;
+import com.github.sormuras.bach.module.ModuleSearcher.JUnitJupiterSearcher;
+import com.github.sormuras.bach.module.ModuleSearcher.JUnitPlatformSearcher;
 
 @ProjectInfo(
     name = "bach-javafx",
     version = "1",
     library =
         @Library(
-            requires = {"org.junit.jupiter", "org.junit.platform.console"},
+            requires = {"org.junit.platform.console"},
             links = {
-              @Link(
-                  module = "javafx.base",
-                  target = "org.openjfx:javafx-base:16-ea+4:${JAVAFX-PLATFORM}"),
-              @Link(
-                  module = "javafx.controls",
-                  target = "org.openjfx:javafx-controls:16-ea+4:${JAVAFX-PLATFORM}"),
-              @Link(
-                  module = "javafx.graphics",
-                  target = "org.openjfx:javafx-graphics:16-ea+4:${JAVAFX-PLATFORM}"),
+              @Link(module = "org.apiguardian.api", target = "org.apiguardian:apiguardian-api:1.1.0"),
+              @Link(module = "org.opentest4j", target = "org.opentest4j:opentest4j:1.2.0"),
+            },
+            searchers = {
+              @Searcher(with = JavaFXSearcher.class, version = "16-ea+4"),
+              @Searcher(with = JUnitJupiterSearcher.class, version = "5.7.0"),
+              @Searcher(with = JUnitPlatformSearcher.class, version = "1.7.0"),
             }),
     main =
         @Main(
