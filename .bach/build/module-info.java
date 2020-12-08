@@ -1,14 +1,11 @@
-import build.JavaFX_16_ea_Modules;
 import com.github.sormuras.bach.project.Feature;
 import com.github.sormuras.bach.project.ProjectInfo;
-import com.github.sormuras.bach.project.ProjectInfo.ExternalModules;
 import com.github.sormuras.bach.project.ProjectInfo.Tweak;
 
 @ProjectInfo(
     name = "bach-javafx",
     version = "1",
     features = Feature.GENERATE_CUSTOM_RUNTIME_IMAGE,
-    externalModules = @ExternalModules( lookups = JavaFX_16_ea_Modules.class ),
     tweaks = {
         @Tweak(
             tool = "jar(com.github.sormuras.bach.javafx)",
@@ -23,6 +20,7 @@ import com.github.sormuras.bach.project.ProjectInfo.Tweak;
                 "--strip-debug"
             }),
     })
-open module build {
+module build {
   requires com.github.sormuras.bach;
+  provides com.github.sormuras.bach.project.ModuleLookup with build.JavaFX_16_ea_Modules;
 }
