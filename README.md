@@ -4,7 +4,7 @@ A demo of building a modular application with [Bach.java] based on [HelloFX/CLI]
 
 ## Prepare
 
-- Download [JDK] 16-ea or later
+- Download [JDK] 16 or later
 - Clone this repository
 - Open a command shell and ensure `jshell --version` is working correctly
 

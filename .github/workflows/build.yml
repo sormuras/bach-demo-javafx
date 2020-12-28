@@ -17,7 +17,7 @@ jobs:
       fail-fast: false
       matrix:
         os: [ ubuntu-latest, macOS-latest, windows-latest ]
-        java: [ 16-ea ]
+        java: [ 17-ea ]
     runs-on: ${{ matrix.os }}
     steps:
       - name: 'Check out repository'
@@ -27,12 +27,14 @@ jobs:
         with:
           java-version: ${{ matrix.java }}
       - name: 'Build with Bach'
-        uses: sormuras/bach-build@main
+        uses: sormuras/bach-build@v1
+        with:
+          bach-version: 16
       - name: 'Package self-contained Java application'
         shell: bash
         run: |
           jpackage --verbose \
-          --name bach+fx \
+          --name bach+javafx \
           --description "Show-case building a modular Java + JavaFX application with Bach" \
           --vendor "Christian Stein" \
           --runtime-image .bach/workspace/image \
