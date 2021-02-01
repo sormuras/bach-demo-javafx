@@ -25,7 +25,7 @@ public class Program implements BuildProgram {
 
     @Override
     public ModuleLookup computeModuleLookup() {
-      return ModuleLookup.compose(new ModuleLookup.JavaFX("16-ea+5"), super.computeModuleLookup());
+      return ModuleLookup.compose(new ModuleLookup.JavaFX("16-ea+6"), super.computeModuleLookup());
     }
   }
 }

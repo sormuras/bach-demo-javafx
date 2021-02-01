@@ -27,9 +27,12 @@ jobs:
         with:
           java-version: ${{ matrix.java }}
       - name: 'Build with Bach'
-        uses: sormuras/bach-build@v1
-        with:
-          bach-version: 16
+        shell: bash
+        run: |
+          java \
+          --module-path .bach/cache \
+          --module com.github.sormuras.bach \
+          build
       - name: 'Package self-contained Java application'
         shell: bash
         run: |
