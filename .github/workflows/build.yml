@@ -30,7 +30,7 @@ jobs:
         shell: bash
         run: |
           java \
-          --module-path .bach/cache \
+          --module-path .bach/bin \
           --module com.github.sormuras.bach \
           build
       - name: 'Package self-contained Java application'
