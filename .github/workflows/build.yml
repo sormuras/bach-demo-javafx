@@ -29,10 +29,8 @@ jobs:
       - name: 'Build with Bach'
         shell: bash
         run: |
-          java \
-          --module-path .bach/bin \
-          --module com.github.sormuras.bach \
-          build
+          PATH=.bach/bin:$PATH
+          bach build
       - name: 'Package self-contained Java application'
         shell: bash
         run: |

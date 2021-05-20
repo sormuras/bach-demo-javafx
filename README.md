@@ -11,8 +11,14 @@ A demo of building a modular application with [Bach] based on [HelloFX/CLI](http
 
 Change into the base directory of your cloned project and call:
 
+- Linux/Mac
 ```shell script
-java --module-path .bach/bin --module com.github.sormuras.bach build
+.bach/bin/bach build
+```
+
+- Windows
+```shell script
+.bach\bin\bach build
 ```
 
 ## Run via custom runtime image
