@@ -4,7 +4,7 @@ A demo of building a modular application with [Bach] based on [HelloFX/CLI](http
 
 ## Prepare
 
-- Download [JDK] 16 or later
+- Download [JDK] 17 or later
 - Clone this repository
 
 ## Build
@@ -25,12 +25,12 @@ Change into the base directory of your cloned project and call:
 
 - Linux/Mac
 ```shell script
-.bach/workspace/image/bin/java --module com.github.sormuras.bach.javafx
+.bach/workspace/image/bin/bach-javafx
 ```
 
 - Windows
 ```shell script
-.bach\workspace\image\bin\java --module com.github.sormuras.bach.javafx
+.bach\workspace\image\bin\bach-javafx
 ```
 
 
