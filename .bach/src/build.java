@@ -4,7 +4,7 @@ import com.github.sormuras.bach.external.JavaFX;
 class build {
   public static void main(String... args) {
     try (var bach = new Bach(args)) {
-      var grabber = bach.grabber(JavaFX.version("18-ea+3"));
+      var grabber = bach.grabber(JavaFX.version("18-ea+6"));
       grabber.grabExternalModules("javafx.base", "javafx.controls");
       grabber.grabMissingExternalModules();
 
