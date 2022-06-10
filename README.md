@@ -38,12 +38,12 @@ java --module-path .bach\out\main\modules;.bach\external-modules --module com.gi
 
 - Linux/Mac
 ```shell script
-.bach/workspace/image/bin/bach-javafx
+.bach/out/main/image/bin/bach-javafx
 ```
 
 - Windows
 ```shell script
-.bach\workspace\image\bin\bach-javafx
+.bach\out\main\image\bin\bach-javafx
 ```
 
 

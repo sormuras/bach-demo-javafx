@@ -22,6 +22,7 @@ class build {
     bach.run(
         ToolCall.of("jlink")
             .with("--output", image)
+            .with("--launcher", "bach-javafx=com.github.sormuras.bach.javafx")
             .with("--add-modules", main.modules().names(","))
             .with("--module-path", test.toModulePath(paths).orElseThrow()));
   }
