@@ -22,16 +22,10 @@ jobs:
     steps:
       - name: 'Check out repository'
         uses: actions/checkout@v2
-      - name: 'Download JDK'
-        uses: sormuras/download-jdk@v1
-        with:
-          feature: ${{ matrix.java }}
       - name: 'Set up JDK'
-        uses: actions/setup-java@v2
+        uses: oracle-actions/setup-java@v1
         with:
-          java-version: ${{ env.JDK_VERSION }}
-          distribution: jdkfile
-          jdkFile: ${{ env.JDK_FILE }}
+          release: ${{ matrix.java }}
       - name: 'Build with Bach'
         shell: bash
         run: |
@@ -44,12 +38,12 @@ jobs:
           --name bach+javafx \
           --description "Show-case building a modular Java + JavaFX application with Bach" \
           --vendor "Christian Stein" \
-          --runtime-image .bach/workspace/image \
+          --runtime-image .bach/out/main/image \
           --module com.github.sormuras.bach.javafx/com.github.sormuras.bach.javafx.Main \
-          --dest .bach/workspace/package
+          --dest .bach/out/main/package
       - name: 'Upload packaged application'
         uses: actions/upload-artifact@v2
         with:
           name: ${{ github.event.repository.name }}-${{ matrix.os }}-${{ github.sha }}
           path: |
-            .bach/workspace/package
+            .bach/out/main/package

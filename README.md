@@ -21,6 +21,19 @@ Change into the base directory of your cloned project and call:
 .bach\bin\bach build
 ```
 
+## Run via Java Launcher
+
+
+- Linux/Mac
+```shell script
+java --module-path .bach/out/main/modules:.bach/external-modules --module com.github.sormuras.bach.javafx
+```
+
+- Windows
+```shell script
+java --module-path .bach\out\main\modules;.bach\external-modules --module com.github.sormuras.bach.javafx
+```
+
 ## Run via custom runtime image
 
 - Linux/Mac
