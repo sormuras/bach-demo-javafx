@@ -39,7 +39,7 @@ jobs:
           --description "Show-case building a modular Java + JavaFX application with Bach" \
           --vendor "Christian Stein" \
           --runtime-image .bach/out/main/image \
-          --module com.github.sormuras.bach.javafx/com.github.sormuras.bach.javafx.Main \
+          --module demo/demo.Main \
           --dest .bach/out/main/package
       - name: 'Upload packaged application'
         uses: actions/upload-artifact@v3
