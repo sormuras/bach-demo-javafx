@@ -1,4 +1,4 @@
-package com.github.sormuras.bach.javafx;
+package demo;
 
 class SystemInfo {
 

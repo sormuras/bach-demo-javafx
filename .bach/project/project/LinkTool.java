@@ -23,7 +23,7 @@ public record LinkTool(String name) implements ToolOperator {
         "jlink",
         link ->
             link.with("--output", image)
-                .with("--launcher", "bach-demo-javafx=com.github.sormuras.bach.javafx")
+                .with("--launcher", "demo=demo")
                 .with("--add-modules", main.modules().names(","))
                 .with("--module-path", test.toModulePath(paths).orElseThrow()));
   }
