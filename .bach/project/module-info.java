@@ -1,7 +1,7 @@
+@run.bach.Command(name = "build", args = "run.bach/build + link")
 module project {
   requires run.bach;
 
-  provides run.bach.ToolOperator with
-      project.BuildTool,
-      project.LinkTool;
+  provides run.bach.Composer with
+      project.DemoComposer;
 }
