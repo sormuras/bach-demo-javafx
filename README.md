@@ -4,21 +4,15 @@ A demo of building a modular application with [Bach] based on [HelloFX/CLI](http
 
 ## Prepare
 
-- Download [JDK] 17 or later
-- Clone this repository
+- Download [JDK] 22 or later
+- Clone this repository with submodules
 
 ## Build
 
 Change into the base directory of your cloned project and call:
 
-- Linux/Mac
 ```shell script
-.bach/bin/bach build
-```
-
-- Windows
-```shell script
-.bach\bin\bach build
+java @build
 ```
 
 ## Run via Java Launcher
@@ -26,12 +20,12 @@ Change into the base directory of your cloned project and call:
 
 - Linux/Mac
 ```shell script
-java --module-path .bach/out/main/modules:.bach/external-modules --module demo
+java --module-path .bach/out/main/modules:lib --module demo
 ```
 
 - Windows
 ```shell script
-java --module-path .bach\out\main\modules;.bach\external-modules --module demo
+java --module-path .bach\out\main\modules;lib --module demo
 ```
 
 ## Run via custom runtime image

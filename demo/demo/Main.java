@@ -20,7 +20,7 @@ public class Main extends Application {
     stage.setTitle(Main.class.getModule().getDescriptor().toNameAndVersion());
   }
 
-  public static void main(String[] args) {
-    launch();
+  public static void main(String... args) {
+    launch(Main.class, args);
   }
 }
