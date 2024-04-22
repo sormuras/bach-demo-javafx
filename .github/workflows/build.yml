@@ -29,6 +29,7 @@ jobs:
         with:
           release: ${{ matrix.java }}
       - name: 'Build with Bach'
+        shell: bash
         run: java --show-version @build
       - name: 'Package self-contained Java application installer'
         shell: bash
