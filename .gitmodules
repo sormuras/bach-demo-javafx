@@ -1,3 +1,6 @@
 [submodule ".bach/src/run/bach"]
 	path = .bach/src/run/bach
 	url = https://github.com/sormuras/run.bach
+[submodule ".bach/src/run/info/bach"]
+	path = .bach/src/run/info/bach
+	url = https://github.com/sormuras/bach-info
